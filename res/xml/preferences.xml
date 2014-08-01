@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="ISLA" android:layout="@layout/preferences_headers">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="granCanaria"
+            android:summary="Experiencias de la isla de Gran Canaria"
+            android:title="GRAN CANARIA"
+            android:layout="@layout/preferences_items"/>
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="tenerife"
+            android:summary="Experiencias de la isla de Tenerife"
+            android:title="TENERIFE"
+            android:layout="@layout/preferences_items"/>
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="PREMIOS" android:layout="@layout/preferences_headers">
+        <ListPreference 
+        	android:key="premiosDia" 
+        	android:defaultValue="0"
+        	android:entries="@array/Choices" 
+        	android:summary="Selecciona el número de premios por día."
+        	android:title="PREMIOS POR DÍA"
+        	android:entryValues="@array/Values"
+        	android:layout="@layout/preferences_items_nocheck"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

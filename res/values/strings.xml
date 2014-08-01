@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AppWowWeekend</string>
+
+    <!-- Pantalla logo -->
+    <string name="main_content">App WOW Weekend</string>
+    <string name="participa">Participa y gana</string>
+    <string name="first_button">Fumador Marca</string>
+    <string name="second_button">Fumador Ocasional</string>
+    <string name="third_button">Fumador Otras Marcas</string>
+    
+    <!-- Pantalla marca -->
+    <string name="marca_content">Vista marca</string>
+    <string name="cabecera_3">¿Con qué marca identifica esta cajetilla?</string>
+    <string name="cabecera_4">Te presentamos la cajetilla más creativa &#8230;</string>
+    <string name="cajetilla_off">Cajetilla off</string>
+    <string name="cajetilla_on">Cajetilla on</string>
+    <string name="action_settings">Settings</string>
+    <string name="positive_button">Acierto</string>
+    <string name="negative_button">Fallo</string>
+    
+    <!-- Pantalla exp experiencia -->
+    <string name="cabecera_5">Premio directo</string>
+    <string name="experiencia_exp">Gana ahora una experiencia inolvidable para ti y un amigo</string>
+	
+    <!-- Pantalla experiencia -->
+    <string name="experiencia_content">Vista experiencia</string>
+    
+    <!-- Pantalla QR -->
+    <string name="qr_content">Vista escáner</string>
+    <string name="getting_gift">¿Has ganado la experiencia? Lo sabremos en unos segundos &#8230;</string>
+    
+    <!-- Pantalla result -->
+    <string name="result_content">Vista final</string>
+</resources>

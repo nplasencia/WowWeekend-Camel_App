@@ -1,0 +1,8 @@
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="general_background">#0099cc</color>
+    <color name="general_text">#33b5e5</color>
+    <color name="blanco">#FFFFFF</color>
+	<color name="amarillo">#fbe32f</color>
+</resources>

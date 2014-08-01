@@ -1,0 +1,132 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fullscreen_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/fondo"
+    android:keepScreenOn="true">
+
+    <SurfaceView
+        android:id="@+id/preview_view"
+        android:layout_width="800dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"/>
+    
+    <com.google.zxing.client.android.ViewfinderView
+        android:id="@+id/viewfinder_view"
+        android:layout_width="800dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:background="@color/transparent" />
+    
+    <ImageView
+        android:id="@+id/title_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:contentDescription="@string/participa"
+        android:gravity="center"
+        android:src="@drawable/cabecera_qr" />
+
+    <LinearLayout
+        android:id="@+id/result_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/result_view"
+        android:baselineAligned="false"
+        android:orientation="vertical"
+        android:padding="4dip"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="12dip" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="right|center_vertical"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/barcode_image_view"
+                    android:layout_width="160dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dip"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="160dip"
+                    android:maxWidth="160dip"
+                    android:scaleType="centerInside" />
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/contents_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autoLink="web"
+                        android:paddingLeft="12dip"
+                        android:textColor="@color/result_text"
+                        android:textColorLink="@color/result_text"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/contents_supplement_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autoLink="web"
+                        android:padding="24dip"
+                        android:textColor="@color/result_text"
+                        android:textColorLink="@color/result_text"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <Button
+		android:id="@+id/back_button"
+		style="?android:attr/buttonBarButtonStyle"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom|left"
+		android:background="@null"
+		android:drawableBottom="@drawable/boton_atras" />
+
+    <TextView 
+        android:id="@+id/qr_subtitle"
+        android:layout_height="100dp"
+        android:layout_width="fill_parent"
+        android:layout_gravity="bottom"
+        android:gravity="top|center_horizontal"
+        android:text="ESCANEA TU CÓDIGO QR"
+        android:textSize="40sp"
+        android:textColor="#FFFFFF"/>
+    
+    <Button
+        android:id="@+id/button_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawableBottom="@drawable/logo2"
+        android:layout_gravity="bottom|right"/>
+
+</FrameLayout>

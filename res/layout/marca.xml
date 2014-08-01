@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fullscreen_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/fondo"
+    android:keepScreenOn="true"
+    tools:context="com.auret.appwowweekend.MarcaActivity">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        
+	    <ImageView
+	        android:id="@+id/title_content"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        android:contentDescription="@string/cabecera_3"
+	        android:src="@drawable/cabecera_3"/>
+	
+	    <ImageView
+	        android:id="@+id/cajetilla_off"
+	        android:layout_width="wrap_content"
+	        android:layout_height="fill_parent"
+	        android:layout_gravity="center"
+	        android:contentDescription="@string/cajetilla_off"
+	        android:src="@drawable/cajetilla_linea"/>
+	    
+	    <ImageView
+	        android:id="@+id/cajetilla_on"
+	        android:layout_width="wrap_content"
+	        android:layout_height="fill_parent"
+	        android:layout_gravity="center"
+	        android:contentDescription="@string/cajetilla_on"
+	        android:alpha="0.0"
+	        android:src="@drawable/cajetilla_on"/>
+	    
+	</LinearLayout>
+	
+    <EditText 
+        android:id="@+id/marca_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textScaleX="1.5"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:hint=""
+        android:inputType="text|textNoSuggestions|none"
+        android:background="@drawable/campo_texto"
+        android:layout_marginTop="254dp"/>
+    
+    <Button
+        android:id="@+id/button_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawableBottom="@drawable/logo2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
