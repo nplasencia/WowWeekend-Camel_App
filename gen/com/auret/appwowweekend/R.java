@@ -1126,37 +1126,38 @@ containing a value of this type.
         public static final int boton_ajustes=0x7f020057;
         public static final int boton_atras=0x7f020058;
         public static final int boton_habitual=0x7f020059;
-        public static final int boton_ocasional=0x7f02005a;
-        public static final int boton_otros=0x7f02005b;
-        public static final int cabecera_3=0x7f02005c;
-        public static final int cabecera_4=0x7f02005d;
-        public static final int cabecera_5=0x7f02005e;
-        public static final int cabecera_exp_agosto=0x7f02005f;
-        public static final int cabecera_qr=0x7f020060;
-        public static final int cajetilla_linea=0x7f020061;
-        public static final int cajetilla_on=0x7f020062;
-        public static final int camara=0x7f020063;
-        public static final int campo_texto=0x7f020064;
-        public static final int campo_texto_on=0x7f020065;
+        public static final int boton_negativo=0x7f02005a;
+        public static final int boton_ocasional=0x7f02005b;
+        public static final int boton_otros=0x7f02005c;
+        public static final int boton_positivo=0x7f02005d;
+        public static final int cabecera_3=0x7f02005e;
+        public static final int cabecera_4=0x7f02005f;
+        public static final int cabecera_5=0x7f020060;
+        public static final int cabecera_exp_agosto=0x7f020061;
+        public static final int cabecera_qr=0x7f020062;
+        public static final int cajetilla_linea=0x7f020063;
+        public static final int cajetilla_on=0x7f020064;
+        public static final int camara=0x7f020065;
         public static final int check_off=0x7f020066;
         public static final int check_on=0x7f020067;
         public static final int checkbox_prefs=0x7f020068;
         public static final int experiencia_exp=0x7f020069;
         public static final int fondo=0x7f02006a;
         public static final int fondo_ajustes=0x7f02006b;
-        public static final int fondo_logo=0x7f02006c;
-        public static final int fondo_looser=0x7f02006d;
-        public static final int fondo_premio_directo=0x7f02006e;
-        public static final int fondo_winner=0x7f02006f;
-        public static final int fotos_exp_lp=0x7f020070;
-        public static final int fotos_exp_tfn=0x7f020071;
-        public static final int ic_launcher=0x7f020072;
-        public static final int launcher_icon=0x7f020073;
-        public static final int logo1=0x7f020074;
-        public static final int logo2=0x7f020075;
-        public static final int participa1=0x7f020076;
-        public static final int share_via_barcode=0x7f020077;
-        public static final int shopper_icon=0x7f020078;
+        public static final int fondo_corte=0x7f02006c;
+        public static final int fondo_logo=0x7f02006d;
+        public static final int fondo_looser=0x7f02006e;
+        public static final int fondo_premio_directo=0x7f02006f;
+        public static final int fondo_winner=0x7f020070;
+        public static final int fotos_exp_lp=0x7f020071;
+        public static final int fotos_exp_tfn=0x7f020072;
+        public static final int ic_launcher=0x7f020073;
+        public static final int launcher_icon=0x7f020074;
+        public static final int logo1=0x7f020075;
+        public static final int logo2=0x7f020076;
+        public static final int participa1=0x7f020077;
+        public static final int share_via_barcode=0x7f020078;
+        public static final int shopper_icon=0x7f020079;
     }
     public static final class id {
         public static final int action_bar=0x7f0a0026;
@@ -1170,7 +1171,6 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f0a0020;
         public static final int action_menu_presenter=0x7f0a0021;
         public static final int action_mode_close_button=0x7f0a002e;
-        public static final int action_settings=0x7f0a007b;
         public static final int activity_chooser_view_content=0x7f0a002f;
         public static final int always=0x7f0a0015;
         /**  Messages IDs 
@@ -1181,10 +1181,12 @@ containing a value of this type.
         public static final int beginning=0x7f0a001b;
         public static final int bookmark_title=0x7f0a0046;
         public static final int bookmark_url=0x7f0a0047;
+        public static final int btn_correct=0x7f0a006e;
+        public static final int btn_incorrect=0x7f0a006f;
         public static final int button_camara=0x7f0a0070;
         public static final int button_home=0x7f0a0052;
-        public static final int cajetilla_off=0x7f0a006d;
-        public static final int cajetilla_on=0x7f0a006e;
+        public static final int cajetilla_off=0x7f0a006c;
+        public static final int cajetilla_on=0x7f0a006d;
         public static final int checkbox=0x7f0a0037;
         public static final int collapseActionView=0x7f0a0017;
         public static final int config_button=0x7f0a0067;
@@ -1223,12 +1225,10 @@ containing a value of this type.
         public static final int listMode=0x7f0a000b;
         public static final int list_item=0x7f0a0033;
         public static final int logo_buttons=0x7f0a0068;
-        public static final int marca_edit=0x7f0a006f;
         public static final int meta_text_view=0x7f0a005a;
         public static final int meta_text_view_label=0x7f0a0059;
         public static final int middle=0x7f0a001c;
         public static final int never=0x7f0a0013;
-        public static final int next_buttons=0x7f0a006c;
         public static final int none=0x7f0a001a;
         public static final int normal=0x7f0a000a;
         public static final int page_number_view=0x7f0a0074;
@@ -1342,25 +1342,21 @@ containing a value of this type.
         public static final int capture=0x7f030019;
         public static final int encode=0x7f03001a;
         public static final int experiencia=0x7f03001b;
-        public static final int experiencia_exp=0x7f03001c;
-        public static final int help=0x7f03001d;
-        public static final int history_list_item=0x7f03001e;
-        public static final int logo=0x7f03001f;
-        public static final int marca=0x7f030020;
-        public static final int preferences=0x7f030021;
-        public static final int preferences_headers=0x7f030022;
-        public static final int preferences_items=0x7f030023;
-        public static final int preferences_items_nocheck=0x7f030024;
-        public static final int result_looser=0x7f030025;
-        public static final int result_winner=0x7f030026;
-        public static final int search_book_contents=0x7f030027;
-        public static final int search_book_contents_header=0x7f030028;
-        public static final int search_book_contents_list_item=0x7f030029;
-        public static final int share=0x7f03002a;
-        public static final int support_simple_spinner_dropdown_item=0x7f03002b;
-    }
-    public static final class menu {
-        public static final int logo=0x7f100000;
+        public static final int help=0x7f03001c;
+        public static final int history_list_item=0x7f03001d;
+        public static final int logo=0x7f03001e;
+        public static final int marca=0x7f03001f;
+        public static final int preferences=0x7f030020;
+        public static final int preferences_headers=0x7f030021;
+        public static final int preferences_items=0x7f030022;
+        public static final int preferences_items_nocheck=0x7f030023;
+        public static final int result_looser=0x7f030024;
+        public static final int result_winner=0x7f030025;
+        public static final int search_book_contents=0x7f030026;
+        public static final int search_book_contents_header=0x7f030027;
+        public static final int search_book_contents_list_item=0x7f030028;
+        public static final int share=0x7f030029;
+        public static final int support_simple_spinner_dropdown_item=0x7f03002a;
     }
     public static final class raw {
         public static final int beep=0x7f070000;
@@ -1439,9 +1435,6 @@ containing a value of this type.
         public static final int button_wifi=0x7f0b001c;
         public static final int cabecera_3=0x7f0b008b;
         public static final int cabecera_4=0x7f0b008c;
-        /**  Pantalla exp experiencia 
-         */
-        public static final int cabecera_5=0x7f0b0092;
         public static final int cajetilla_off=0x7f0b008d;
         public static final int cajetilla_on=0x7f0b008e;
         public static final int contents_contact=0x7f0b001d;
@@ -1452,10 +1445,9 @@ containing a value of this type.
         public static final int contents_text=0x7f0b0022;
         /**  Pantalla experiencia 
          */
-        public static final int experiencia_content=0x7f0b0094;
-        public static final int experiencia_exp=0x7f0b0093;
+        public static final int experiencia_content=0x7f0b0092;
         public static final int first_button=0x7f0b0087;
-        public static final int getting_gift=0x7f0b0096;
+        public static final int getting_gift=0x7f0b0095;
         public static final int history_clear_one_history_text=0x7f0b0024;
         public static final int history_clear_text=0x7f0b0023;
         public static final int history_email_title=0x7f0b0025;
@@ -1463,6 +1455,7 @@ containing a value of this type.
         public static final int history_empty_detail=0x7f0b0027;
         public static final int history_send=0x7f0b0028;
         public static final int history_title=0x7f0b0029;
+        public static final int img_desc=0x7f0b0097;
         /**  Pantalla logo 
          */
         public static final int main_content=0x7f0b0085;
@@ -1533,12 +1526,13 @@ containing a value of this type.
         public static final int preferences_vibrate_title=0x7f0b0064;
         /**  Pantalla QR 
          */
-        public static final int qr_content=0x7f0b0095;
+        public static final int qr_content=0x7f0b0094;
+        public static final int qr_text=0x7f0b0096;
         public static final int result_address_book=0x7f0b0065;
         public static final int result_calendar=0x7f0b0066;
         /**  Pantalla result 
          */
-        public static final int result_content=0x7f0b0097;
+        public static final int result_content=0x7f0b0098;
         public static final int result_email_address=0x7f0b0067;
         public static final int result_geo=0x7f0b0068;
         public static final int result_isbn=0x7f0b0069;
@@ -1553,6 +1547,7 @@ containing a value of this type.
         public static final int share_name=0x7f0b0071;
         public static final int third_button=0x7f0b0089;
         public static final int title_about=0x7f0b0072;
+        public static final int txt_premioDirecto=0x7f0b0093;
         public static final int wifi_changing_network=0x7f0b0073;
         public static final int wifi_ssid_label=0x7f0b0074;
         public static final int wifi_type_label=0x7f0b0075;

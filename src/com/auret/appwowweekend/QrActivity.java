@@ -32,7 +32,7 @@ public class QrActivity extends CaptureActivity {
 			
 			@Override
 			public void onClick(View v) {
-				QuizHelper quiz = new QuizHelper(v.getContext(), probability);
+				QuizHelper quiz = new QuizHelper(v.getContext(), probability, QrActivity.this);
 				quiz.execute("");
 			}
 		});
@@ -41,6 +41,9 @@ public class QrActivity extends CaptureActivity {
 			
 			@Override
 			public void onClick(View v) {
+				Intent intent = new Intent(QrActivity.this, ExperienciaActivity.class);
+				intent.putExtra(LogoActivity.EXTRA_MESSAGE, probability);
+				startActivity(intent);
 				finish();
 			}
 		});
@@ -48,7 +51,7 @@ public class QrActivity extends CaptureActivity {
 
 	@Override
 	public void handleDecode(Result rawResult, Bitmap barcode) {
-		QuizHelper quiz = new QuizHelper(this, probability);
+		QuizHelper quiz = new QuizHelper(this, probability,QrActivity.this);
 		quiz.execute("");
 	}
 

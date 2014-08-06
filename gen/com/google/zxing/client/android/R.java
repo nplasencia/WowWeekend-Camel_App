@@ -35,9 +35,9 @@ public final class R {
 		public static final int viewfinder_mask = 0x7f090015;
 	}
 	public static final class drawable {
-		public static final int launcher_icon = 0x7f020073;
-		public static final int share_via_barcode = 0x7f020077;
-		public static final int shopper_icon = 0x7f020078;
+		public static final int launcher_icon = 0x7f020074;
+		public static final int share_via_barcode = 0x7f020078;
+		public static final int shopper_icon = 0x7f020079;
 	}
 	public static final class id {
 		public static final int auto_focus = 0x7f0a0000;
@@ -91,12 +91,12 @@ public final class R {
 		public static final int bookmark_picker_list_item = 0x7f030018;
 		public static final int capture = 0x7f030019;
 		public static final int encode = 0x7f03001a;
-		public static final int help = 0x7f03001d;
-		public static final int history_list_item = 0x7f03001e;
-		public static final int search_book_contents = 0x7f030027;
-		public static final int search_book_contents_header = 0x7f030028;
-		public static final int search_book_contents_list_item = 0x7f030029;
-		public static final int share = 0x7f03002a;
+		public static final int help = 0x7f03001c;
+		public static final int history_list_item = 0x7f03001d;
+		public static final int search_book_contents = 0x7f030026;
+		public static final int search_book_contents_header = 0x7f030027;
+		public static final int search_book_contents_list_item = 0x7f030028;
+		public static final int share = 0x7f030029;
 	}
 	public static final class raw {
 		public static final int beep = 0x7f070000;

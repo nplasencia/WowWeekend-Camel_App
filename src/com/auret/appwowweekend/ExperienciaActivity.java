@@ -6,8 +6,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
@@ -61,6 +59,7 @@ public class ExperienciaActivity extends Activity {
 			public void onClick(View v) {
 				Intent intent = new Intent(ExperienciaActivity.this, LogoActivity.class);
 				startActivity(intent);
+				finish();
 			}
 		});
 		
@@ -68,48 +67,11 @@ public class ExperienciaActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
+				Intent intent = new Intent(ExperienciaActivity.this, MarcaActivity.class);
+				intent.putExtra(LogoActivity.EXTRA_MESSAGE, probability);
+				startActivity(intent);
 				finish();
 			}
 		});
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.logo, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
-	
-	@Override
-	protected void onResume() {
-		super.onResume();
-	}
-
-	@Override
-	protected void onPause() {
-		super.onPause();
-	}
-
-	@Override
-	public void onDestroy() {
-		super.onDestroy();
-	}
-
-	@Override
-	public void onStart() {
-		super.onStart();
-	}
-
-	@Override
-	public void onStop() {
-		super.onStop();
 	}
 }

@@ -43,18 +43,25 @@
 	    
 	</LinearLayout>
 	
-    <EditText 
-        android:id="@+id/marca_edit"
+    <Button
+        android:id="@+id/btn_correct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textScaleX="1.5"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:hint=""
-        android:inputType="text|textNoSuggestions|none"
-        android:background="@drawable/campo_texto"
-        android:layout_marginTop="254dp"/>
+        android:background="@null"
+        android:drawableBottom="@drawable/boton_positivo"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"/>
+    
+    <Button
+        android:id="@+id/btn_incorrect"
+        android:layout_toLeftOf="@id/btn_correct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawableBottom="@drawable/boton_negativo"
+        android:layout_marginRight="30dp"
+        android:layout_centerVertical="true"/>
     
     <Button
         android:id="@+id/button_home"

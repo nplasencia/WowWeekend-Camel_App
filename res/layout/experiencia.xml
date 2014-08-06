@@ -21,7 +21,7 @@
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
 	        android:gravity="center"
-	        android:contentDescription="@string/cabecera_5"
+	        android:contentDescription="@string/experiencia_content"
 	        android:src="@drawable/cabecera_exp_agosto"/>
 	    
 	    <TextView 
@@ -58,9 +58,10 @@
         android:layout_height="50dp"
         android:layout_width="fill_parent"
         android:gravity="center_horizontal|top"
-        android:text="PREMIO DIRECTO PARA TI Y QUIEN TÚ ELIJAS"
+        android:text="@string/txt_premioDirecto"
         android:textSize="30sp"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
         android:textColor="#FFFFFF"/>
 	  
     <Button

@@ -7,8 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.InputType;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
@@ -25,15 +23,12 @@ public class LogoActivity extends Activity {
 	private boolean visible = false;
 	private View buttonsView;
 	private View configButton;
-	private View nextButtons;
 	private Intent intent;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.logo);
-		
-		nextButtons = findViewById(R.id.next_buttons);
 		
 		configButton = findViewById(R.id.config_button);
 		configButton.setOnClickListener(new View.OnClickListener() {
@@ -78,17 +73,7 @@ public class LogoActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				intent.putExtra(EXTRA_MESSAGE, ProbabilitiesEnum.MIDDLE);
-				//nextButtons.setVisibility(View.VISIBLE);
-				buttonsView.setVisibility(View.GONE);
-				configButton.setVisibility(View.GONE);
 				startActivity(intent);
-				/*findViewById(R.id.fullscreen_content).setOnClickListener(new OnClickListener() {
-
-					@Override
-					public void onClick(View v) {
-						startActivity(intent);
-					}
-				});*/
 			}
 		});
 		
@@ -97,17 +82,7 @@ public class LogoActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				intent.putExtra(EXTRA_MESSAGE, ProbabilitiesEnum.HIGHEST);
-				//nextButtons.setVisibility(View.VISIBLE);
-				buttonsView.setVisibility(View.GONE);
-				configButton.setVisibility(View.GONE);
 				startActivity(intent);
-				/*findViewById(R.id.fullscreen_content).setOnClickListener(new OnClickListener() {
-
-					@Override
-					public void onClick(View v) {
-						startActivity(intent);
-					}
-				});*/
 			}
 		});
 
@@ -116,17 +91,7 @@ public class LogoActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				intent.putExtra(EXTRA_MESSAGE, ProbabilitiesEnum.LOWEST);
-				//nextButtons.setVisibility(View.VISIBLE);
-				buttonsView.setVisibility(View.GONE);
-				configButton.setVisibility(View.GONE);
 				startActivity(intent);
-				/*findViewById(R.id.fullscreen_content).setOnClickListener(new OnClickListener() {
-
-					@Override
-					public void onClick(View v) {
-						startActivity(intent);
-					}
-				});*/
 			}
 		});
 		buttonsView = (View) findViewById(R.id.logo_buttons);
@@ -141,29 +106,6 @@ public class LogoActivity extends Activity {
 					buttonsView.animate().translationY(0).setDuration(getResources().getInteger(android.R.integer.config_shortAnimTime));
 					delayedHide(AUTO_HIDE_DELAY_MILLIS);
 				}
-			}
-		});
-		
-		findViewById(R.id.back_button).setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				nextButtons.setVisibility(View.GONE);
-				buttonsView.setVisibility(View.VISIBLE);
-				configButton.setVisibility(View.VISIBLE);
-				
-				findViewById(R.id.fullscreen_content).setOnClickListener(new OnClickListener() {
-
-					@Override
-					public void onClick(View v) {
-						if (!visible) {
-							visible=true;
-							configButton.animate().translationY(0).setDuration(getResources().getInteger(android.R.integer.config_shortAnimTime));
-							buttonsView.animate().translationY(0).setDuration(getResources().getInteger(android.R.integer.config_shortAnimTime));
-							delayedHide(AUTO_HIDE_DELAY_MILLIS);
-						}
-					}
-				});
 			}
 		});
 	}
@@ -189,21 +131,6 @@ public class LogoActivity extends Activity {
         mHideHandler.removeCallbacks(mHideRunnable);
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
     }
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.logo, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
 	
 	@Override
 	protected void onResume() {

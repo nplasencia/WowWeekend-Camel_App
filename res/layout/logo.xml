@@ -70,38 +70,4 @@
 	            android:drawableTop="@drawable/boton_otros"/>
 	    </LinearLayout>
 	</FrameLayout>
-	
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true">
-	    
-	    <RelativeLayout
-	        android:id="@+id/next_buttons"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_gravity="bottom"
-	        android:visibility="gone"
-	        tools:ignore="UselessParent" >
-	        
-	        <Button
-	            android:id="@+id/back_button"
-	            style="?android:attr/buttonBarButtonStyle"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentLeft="true"
-	            android:layout_alignParentBottom="true"
-	            android:background="@null"
-	            android:drawableBottom="@drawable/boton_atras" />
-	
-    		<ImageView
-		        android:layout_width="fill_parent"
-		        android:layout_height="wrap_content"
-		        android:gravity="center"
-		        android:layout_alignParentLeft="true"
-	            android:layout_alignParentBottom="true"
-		        android:contentDescription="@string/participa"
-		        android:src="@drawable/participa1"/>
-    	</RelativeLayout>
-    </FrameLayout>
 </RelativeLayout>

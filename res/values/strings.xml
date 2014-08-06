@@ -19,17 +19,16 @@
     <string name="action_settings">Settings</string>
     <string name="positive_button">Acierto</string>
     <string name="negative_button">Fallo</string>
-    
-    <!-- Pantalla exp experiencia -->
-    <string name="cabecera_5">Premio directo</string>
-    <string name="experiencia_exp">Gana ahora una experiencia inolvidable para ti y un amigo</string>
 	
     <!-- Pantalla experiencia -->
     <string name="experiencia_content">Vista experiencia</string>
+    <string name="txt_premioDirecto">PREMIO DIRECTO PARA TI Y QUIEN TÚ ELIJAS</string>
     
     <!-- Pantalla QR -->
     <string name="qr_content">Vista escáner</string>
     <string name="getting_gift">¿Has ganado la experiencia? Lo sabremos en unos segundos &#8230;</string>
+    <string name="qr_text">ESCANEA TU CÓDIGO QR</string>
+    <string name="img_desc">Image</string>
     
     <!-- Pantalla result -->
     <string name="result_content">Vista final</string>
