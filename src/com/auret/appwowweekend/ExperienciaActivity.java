@@ -34,11 +34,11 @@ public class ExperienciaActivity extends Activity {
 		
 		SharedPreferences userPrefs = PreferenceManager.getDefaultSharedPreferences(this);
 		
-		if (userPrefs.getBoolean("granCanaria", false)) {
-			titulo.setText("31 DE AGOSTO / AMADORES BEACH CLUB");
+		if (userPrefs.getBoolean("granCanaria", true)) {
+			titulo.setText("20 DE SEPTIEMBRE / LA CAJA COCINA");
 			image.setImageDrawable(getResources().getDrawable(R.drawable.fotos_exp_lp));
 		} else {
-			titulo.setText("30 DE AGOSTO / MONKEY BEACH CLUB");
+			titulo.setText("27 DE SEPTIEMBRE / AULA DE COCINA DEL MENCEY");
 			image.setImageDrawable(getResources().getDrawable(R.drawable.fotos_exp_tfn));
 		}
 		
