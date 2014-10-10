@@ -35,10 +35,10 @@ public class ExperienciaActivity extends Activity {
 		SharedPreferences userPrefs = PreferenceManager.getDefaultSharedPreferences(this);
 		
 		if (userPrefs.getBoolean("granCanaria", true)) {
-			titulo.setText("20 DE SEPTIEMBRE / LA CAJA COCINA");
+			titulo.setText("8 DE NOVIEMBRE / AULA HH ESTUDIO");
 			image.setImageDrawable(getResources().getDrawable(R.drawable.fotos_exp_lp));
 		} else {
-			titulo.setText("27 DE SEPTIEMBRE / AULA DE COCINA DEL MENCEY");
+			titulo.setText("15 DE NOVIEMBRE / CASA ALBAR - LA LAGUNA");
 			image.setImageDrawable(getResources().getDrawable(R.drawable.fotos_exp_tfn));
 		}
 		

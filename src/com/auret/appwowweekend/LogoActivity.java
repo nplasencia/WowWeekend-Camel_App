@@ -1,5 +1,8 @@
 package com.auret.appwowweekend;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -9,10 +12,19 @@ import android.os.Handler;
 import android.text.InputType;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Toast;
 
+import com.auret.appwowweekend.adapters.EdadItemAdapter;
+import com.auret.appwowweekend.adapters.MarcasItemAdapter;
+import com.auret.appwowweekend.classes.Edad;
+import com.auret.appwowweekend.classes.Marca;
+import com.auret.appwowweekend.enums.EdadesEnum;
+import com.auret.appwowweekend.enums.MarcasEnum;
 import com.auret.appwowweekend.enums.ProbabilitiesEnum;
 import com.auret.appwowweekend.helpers.WowHelper;
 
@@ -23,7 +35,12 @@ public class LogoActivity extends Activity {
 	private boolean visible = false;
 	private View buttonsView;
 	private View configButton;
-	private Intent intent;
+	private Marca marcaHabitual;
+	private Marca marcaOcasional;
+	private Edad edad;
+	private ListView listHabitual;
+	private ListView listOcasional;
+	private ListView listEdades;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -68,32 +85,115 @@ public class LogoActivity extends Activity {
 			}
 		});
 		
+		final List<Marca> marcasHabituales = getAllMarcas();
+		final MarcasItemAdapter adapter1 = new MarcasItemAdapter(marcasHabituales);
+		listHabitual = ((ListView) findViewById(R.id.list_habitual));
+		listHabitual.setAdapter(adapter1);
+		
+		final List<Marca> marcasOcasionales = getAllMarcas();
+		final MarcasItemAdapter adapterOcasionales = new MarcasItemAdapter(marcasOcasionales);
+		listOcasional = ((ListView) findViewById(R.id.list_ocasional));
+		listOcasional.setAdapter(adapterOcasionales);
+		
+		final List<Edad> edades = getAllEdades();
+		final EdadItemAdapter adapterEdades = new EdadItemAdapter(edades);
+		listEdades = ((ListView) findViewById(R.id.list_edad));
+		listEdades.setAdapter(adapterEdades);
+		
+		listHabitual.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				for (Marca marca : marcasHabituales) {
+					marca.setChecked(false);
+				}
+				marcaHabitual = (Marca) parent.getItemAtPosition(position);
+				marcaHabitual.setChecked(true);
+				listHabitual.invalidateViews();
+				
+				//Toast.makeText(parent.getContext(), "Marca habitual: " + marcaHabitual.getMarca().getDescription(), Toast.LENGTH_LONG).show();
+				pasarPantalla();
+			}
+		});
+		
 		findViewById(R.id.first_button).setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				intent.putExtra(EXTRA_MESSAGE, ProbabilitiesEnum.MIDDLE);
-				startActivity(intent);
+				delayedHide(AUTO_HIDE_DELAY_MILLIS);
+				listOcasional.setVisibility(View.GONE);
+				listEdades.setVisibility(View.GONE);
+				if (listHabitual.getVisibility()==View.GONE) {
+					listHabitual.setVisibility(View.VISIBLE);
+				} else {
+					listHabitual.setVisibility(View.GONE);
+				}
+			}
+		});
+		
+		listOcasional.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				for (Marca marca : marcasOcasionales) {
+					marca.setChecked(false);
+				}
+				marcaOcasional = (Marca) parent.getItemAtPosition(position);
+				marcaOcasional.setChecked(true);
+				listOcasional.invalidateViews();
+
+				//Toast.makeText(parent.getContext(), "Marca ocasional: " + marcaOcasional.getMarca().getDescription(), Toast.LENGTH_LONG).show();
+				pasarPantalla();
 			}
 		});
 		
 		findViewById(R.id.second_button).setOnClickListener(new View.OnClickListener() {
-
+			
 			@Override
 			public void onClick(View v) {
-				intent.putExtra(EXTRA_MESSAGE, ProbabilitiesEnum.HIGHEST);
-				startActivity(intent);
+				delayedHide(AUTO_HIDE_DELAY_MILLIS);
+				listHabitual.setVisibility(View.GONE);
+				listEdades.setVisibility(View.GONE);
+				if (listOcasional.getVisibility()==View.GONE) {
+					listOcasional.setVisibility(View.VISIBLE);
+				} else {
+					listOcasional.setVisibility(View.GONE);
+				}
 			}
 		});
+		
+		listEdades.setOnItemClickListener(new OnItemClickListener() {
 
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				for (Edad edad : edades) {
+					edad.setChecked(false);
+				}
+				edad = (Edad) parent.getItemAtPosition(position);
+				edad.setChecked(true);
+				listEdades.invalidateViews();
+				
+				//Toast.makeText(parent.getContext(), "Edad: " + edad.getEdad().getDescription(), Toast.LENGTH_LONG).show();
+				pasarPantalla();
+			}
+		});
+		
 		findViewById(R.id.third_button).setOnClickListener(new View.OnClickListener() {
-
+			
 			@Override
 			public void onClick(View v) {
-				intent.putExtra(EXTRA_MESSAGE, ProbabilitiesEnum.LOWEST);
-				startActivity(intent);
+				delayedHide(AUTO_HIDE_DELAY_MILLIS);
+				listHabitual.setVisibility(View.GONE);
+				listOcasional.setVisibility(View.GONE);
+				
+				if (listEdades.getVisibility()==View.GONE) {
+					listEdades.setVisibility(View.VISIBLE);
+				} else {
+					listEdades.setVisibility(View.GONE);
+				}
 			}
 		});
+
 		buttonsView = (View) findViewById(R.id.logo_buttons);
 		delayedHide(1000);
 		findViewById(R.id.fullscreen_content).setOnClickListener(new OnClickListener() {
@@ -113,7 +213,6 @@ public class LogoActivity extends Activity {
 	@Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        intent = new Intent(LogoActivity.this, MarcaActivity.class);
         delayedHide(1000);
     }
 	
@@ -121,6 +220,8 @@ public class LogoActivity extends Activity {
     Runnable mHideRunnable = new Runnable() {
         @Override
         public void run() {
+        	listHabitual.setVisibility(View.GONE);
+			listOcasional.setVisibility(View.GONE);
         	visible = false;
             buttonsView.animate().translationY(buttonsView.getHeight()).setDuration(getResources().getInteger(android.R.integer.config_shortAnimTime));
             configButton.animate().translationY(-configButton.getHeight()).setDuration(getResources().getInteger(android.R.integer.config_shortAnimTime));
@@ -146,5 +247,56 @@ public class LogoActivity extends Activity {
 	@Override
 	public void onStart() {
 		super.onStart();
+	}
+	
+	private void pasarPantalla(){
+		delayedHide(AUTO_HIDE_DELAY_MILLIS);
+		listEdades.setVisibility(View.GONE);
+		listOcasional.setVisibility(View.GONE);
+		listHabitual.setVisibility(View.GONE);
+		
+		if (marcaHabitual != null) {
+			if (marcaOcasional != null) {
+				if (edad != null) {
+					ProbabilitiesEnum probabilidad = ProbabilitiesEnum.LOWEST;
+					if (!edad.getEdad().equals(EdadesEnum.MAYOR35)) {
+						if (marcaHabitual.getMarca().equals(MarcasEnum.CAMEL)) {
+							probabilidad = ProbabilitiesEnum.MIDDLE;
+						} else if (marcaOcasional.getMarca().equals(MarcasEnum.CAMEL)) {
+							probabilidad = ProbabilitiesEnum.HIGHEST;
+						}
+					}
+					
+					Intent intent = new Intent(LogoActivity.this, MarcaActivity.class);
+					intent.putExtra(EXTRA_MESSAGE, probabilidad);
+   	            	startActivity(intent);
+   	            	finish();
+				} else {
+					listEdades.setVisibility(View.VISIBLE);
+				}
+			} else {
+				listOcasional.setVisibility(View.VISIBLE);
+			}
+		} else {
+			listHabitual.setVisibility(View.VISIBLE);
+		}
+	}
+	
+	private List<Marca> getAllMarcas() {
+		MarcasEnum marcasEnum[] = MarcasEnum.values();
+		List<Marca> marcas = new ArrayList<Marca>(marcasEnum.length);
+		for (int i = 0; i < marcasEnum.length; i++) {
+			marcas.add(new Marca(marcasEnum[i], false));
+		}
+		return marcas;
+	}
+	
+	private List<Edad> getAllEdades() {
+		EdadesEnum edadesEnum[] = EdadesEnum.values();
+		List<Edad> edades = new ArrayList<Edad>(edadesEnum.length);
+		for (int i = 0; i < edadesEnum.length; i++) {
+			edades.add(new Edad(edadesEnum[i], false));
+		}
+		return edades;
 	}
 }

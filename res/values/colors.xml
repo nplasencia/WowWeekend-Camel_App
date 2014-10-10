@@ -5,4 +5,7 @@
     <color name="general_text">#33b5e5</color>
     <color name="blanco">#FFFFFF</color>
 	<color name="amarillo">#fbe32f</color>
+	<color name="firstButton">#CCE4A60E</color>
+	<color name="secondButton">#CC5597D3</color>
+	<color name="thirdButton">#CC325888</color>
 </resources>
