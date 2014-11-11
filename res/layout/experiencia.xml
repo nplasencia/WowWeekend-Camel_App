@@ -22,25 +22,25 @@
 	        android:layout_height="wrap_content"
 	        android:gravity="center"
 	        android:contentDescription="@string/experiencia_content"
-	        android:src="@drawable/cabecera_exp_octubre"/>
+	        android:src="@drawable/cabecera_exp_noviembre"/>
 	    
 	    <TextView 
 	        android:id="@+id/experience_title"
 	        android:layout_height="wrap_content"
 	        android:layout_width="fill_parent"
 	        android:gravity="center"
-	        android:textSize="40sp"
+	        android:textSize="50sp"
 	        android:textColor="#fbe32f"
-	        android:layout_marginTop="-75dp"/>
+	        android:layout_marginTop="-75dp"
+	        android:text="@string/expLasPalmas"/>
 	    
 	    <ImageView
 	        android:id="@+id/experience"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
-	        android:gravity="center"
 	        android:contentDescription="@string/main_content"
-	        android:src="@drawable/fotos_exp_lp"
-	        android:layout_marginTop="30dp"/>
+	        android:gravity="center"
+	        android:src="@drawable/fotos_exp_lp" />
 	    
 	</LinearLayout>
 	

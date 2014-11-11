@@ -35,10 +35,10 @@ public class ExperienciaActivity extends Activity {
 		SharedPreferences userPrefs = PreferenceManager.getDefaultSharedPreferences(this);
 		
 		if (userPrefs.getBoolean("granCanaria", true)) {
-			titulo.setText("8 DE NOVIEMBRE / AULA HH ESTUDIO");
+			titulo.setText(R.string.expLasPalmas);
 			image.setImageDrawable(getResources().getDrawable(R.drawable.fotos_exp_lp));
 		} else {
-			titulo.setText("15 DE NOVIEMBRE / CASA ALBAR - LA LAGUNA");
+			titulo.setText(R.string.expTenerife);
 			image.setImageDrawable(getResources().getDrawable(R.drawable.fotos_exp_tfn));
 		}
 		

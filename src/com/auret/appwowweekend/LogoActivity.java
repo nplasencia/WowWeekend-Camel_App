@@ -259,14 +259,14 @@ public class LogoActivity extends Activity {
 			if (marcaOcasional != null) {
 				if (edad != null) {
 					ProbabilitiesEnum probabilidad = ProbabilitiesEnum.LOWEST;
-					if (!edad.getEdad().equals(EdadesEnum.MAYOR35)) {
+					if (!edad.getEdad().equals(EdadesEnum.MAYOR35) && !marcaHabitual.getMarca().equals(MarcasEnum.WINSTON) && !marcaHabitual.getMarca().equals(MarcasEnum.OTROS) &&
+							!marcaOcasional.getMarca().equals(MarcasEnum.WINSTON) && !marcaOcasional.getMarca().equals(MarcasEnum.OTROS)) {
 						if (marcaHabitual.getMarca().equals(MarcasEnum.CAMEL)) {
 							probabilidad = ProbabilitiesEnum.MIDDLE;
-						} else if (marcaOcasional.getMarca().equals(MarcasEnum.CAMEL)) {
+						} else {
 							probabilidad = ProbabilitiesEnum.HIGHEST;
 						}
 					}
-					
 					Intent intent = new Intent(LogoActivity.this, MarcaActivity.class);
 					intent.putExtra(EXTRA_MESSAGE, probabilidad);
    	            	startActivity(intent);
