@@ -3,8 +3,8 @@ package com.auret.appwowweekend.enums;
 
 public enum ProbabilitiesEnum {
 
-	HIGHEST (70, "Highest probability"), 
-	MIDDLE  (30, "Middle probability"),
+	HIGHEST (100, "Highest probability"), 
+	MIDDLE  (50, "Middle probability"),
 	LOWEST  (0, "Lowest probability");
 	
 	private Integer value;
