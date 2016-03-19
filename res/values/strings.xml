@@ -23,8 +23,8 @@
     <!-- Pantalla experiencia -->
     <string name="experiencia_content">Vista experiencia</string>
     <string name="txt_premioDirecto">PREMIO DIRECTO PARA TI Y QUIEN TÚ ELIJAS</string>
-    <string name="expLasPalmas">22 DE NOVIEMBRE / THE ROOM</string>
-    <string name="expTenerife">28 DE NOVIEMBRE / BULAN CLUB</string>
+    <string name="expLasPalmas">ELABORACIÓN Y CATA DE CERVEZA</string>
+    <string name="expTenerife">ELABORACIÓN Y CATA DE CERVEZA</string>
     
     <!-- Pantalla QR -->
     <string name="qr_content">Vista escáner</string>

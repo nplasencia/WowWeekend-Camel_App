@@ -27,7 +27,7 @@
         android:gravity="center"
         android:contentDescription="@string/main_content"
         android:src="@drawable/logo1"
-        android:visibility="gone"/>
+        android:visibility="visible"/>
     
     <FrameLayout
         android:layout_width="match_parent"

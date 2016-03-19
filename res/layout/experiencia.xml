@@ -22,7 +22,7 @@
 	        android:layout_height="wrap_content"
 	        android:gravity="center"
 	        android:contentDescription="@string/experiencia_content"
-	        android:src="@drawable/cabecera_exp_noviembre"/>
+	        android:src="@drawable/cabecera_exp_diciembre"/>
 	    
 	    <TextView 
 	        android:id="@+id/experience_title"
